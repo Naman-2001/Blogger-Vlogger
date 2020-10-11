@@ -1,6 +1,6 @@
 export const showPost = () => {
   return (dispatch) => {
-    fetch("/posts")
+    fetch("https://blog-app-backend1.herokuapp.com/posts")
       .then((res) => res.json())
       .then((data) => {
         dispatch({ type: "SHOW_POST", data });
@@ -10,7 +10,7 @@ export const showPost = () => {
 
 export const showCategory = () => {
   return (dispatch) => {
-    fetch("/categories")
+    fetch("https://blog-app-backend1.herokuapp.com/categories")
       .then((res) => res.json())
       .then((catdata) => {
         dispatch({ type: "SHOW_CATEGORY", catdata });
@@ -20,7 +20,7 @@ export const showCategory = () => {
 
 export const showComments = () => {
   return (dispatch) => {
-    fetch("/comments")
+    fetch("https://blog-app-backend1.herokuapp.com/comments")
       .then((res) => res.json())
       .then((commentData) => {
         dispatch({ type: "SHOW_COMMENT", commentData });
@@ -30,7 +30,7 @@ export const showComments = () => {
 
 export const createComment = (comment) => {
   return (dispatch) => {
-    fetch("/new-comment", {
+    fetch("https://blog-app-backend1.herokuapp.com/new-comment", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -12,7 +12,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/category">
+        <Route path="/category" component={Category}>
           <Category />
         </Route>
         <Route path="/single">
